@@ -1,8 +1,9 @@
+import math
 class Solution:
     def minhours(self, piles,speed):
         totalhours=0
         for bananas in piles:
-            totalhours+= (bananas+speed-1)//speed
+            totalhours+= math.ceil(bananas/speed)
         return totalhours
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         maxp= max(piles)
