@@ -1,10 +1,7 @@
-
+import math
 class Solution:
     def ceil(self,nums,divisor,n):
-        totalsum=0
-        for i in range(n):
-            totalsum+= (nums[i]+divisor-1)//divisor
-        return totalsum
+        return sum(math.ceil(i/divisor) for i in nums)
             
 
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
